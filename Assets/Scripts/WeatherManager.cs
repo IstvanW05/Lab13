@@ -15,7 +15,7 @@ public class WeatherManager : MonoBehaviour
         StartCoroutine(GetWeatherXML(OnXMLDataLoaded));
     }
 
-    private IEnumerator CallAPI(Action<string> callback)
+    private IEnumerator CallAPI(string xmlApi, Action<string> callback)
     {
         using (UnityWebRequest request = UnityWebRequest.Get(xmlApi))
         {
